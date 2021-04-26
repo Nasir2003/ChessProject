@@ -2,3 +2,19 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+.red_chessboard {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+}
+
+.blue_chessboard {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+}
+
+.flex_container {
+  display: flex;
+}
