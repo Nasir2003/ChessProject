@@ -18,3 +18,15 @@
 .flex_container {
   display: flex;
 }
+
+.blue {
+  height: 100px;
+  width: 100px;
+  background-color: skyblue;
+}
+
+.red {
+  height: 100px;
+  width: 100px;
+  background-color: crimson;
+}
