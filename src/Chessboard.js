@@ -2,17 +2,17 @@ import Piece from "./Piece.js";
 import Tile from "./Tile.js"; 
  
 let board = [
-  ["0", "1", "2", "3", "4", "5", "6", "7"],
-  ["8", "9", "-", "-", "-", "-", "-", "-"],
-  ["-", "-", "-", "-", "-", "-", "-", "-"],
-  ["-", "-", "-", "-", "-", "-", "-", "-"],
-  ["-", "-", "-", "-", "-", "-", "-", "-"],
-  ["-", "-", "-", "-", "-", "-", "-", "-"],
-  ["-", "-", "-", "-", "-", "-", "-", "-"],
-  ["-", "-", "-", "-", "-", "-", "-", "-"]
+  <Piece color="B" type='Rook' />, "1", "2", "3", "4", "5", "6", "7",
+  "8", "9", "-", "-", "-", "-", "-", "-",
+  "-", "-", "-", "-", "-", "-", "-", "-",
+  "-", "-", "-", "-", "-", "-", "-", "-",
+  "-", "-", "-", "-", "-", "-", "-", "-",
+  "-", "-", "-", "-", "-", "-", "-", "-",
+  "-", "-", "-", "-", "-", "-", "-", "-",
+  "-", "-", "-", "-", "-", "-", "-", "-"
 ];
 // location = [0, 63]
-
+console.log(board[0[0]]);
 export default function Chessboard(props) {
   let html = "";
   for (let indiv of board) {
@@ -22,7 +22,7 @@ export default function Chessboard(props) {
     <div>
       
       <div class="flex_container">
-        <Tile location='h1' color='red' piece={<Piece color="B" type='Rook' />}/> 
+        <Tile location='h1' color='red' piece={board[0]}/> 
         <Tile location='h2' color='blue' piece={<Piece color="B" type='Knight' />}/> 
         <Tile location='h3' color='red' piece={<Piece color="B" type='Bishop' />}/> 
         <Tile location='h4' color='blue' piece={<Piece color="B" type='King' />}/> 
