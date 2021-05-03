@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./styles.css"; 
 import Chessboard from "./Chessboard.js";
 import Piece from "./Piece.js";
 import "./Timer.js";

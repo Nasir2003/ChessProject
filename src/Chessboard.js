@@ -1,6 +1,6 @@
 import Piece from "./Piece.js";
-import Tile from "./Tile.js";
-
+import Tile from "./Tile.js"; 
+ 
 let board = [
   ["0", "1", "2", "3", "4", "5", "6", "7"],
   ["8", "9", "-", "-", "-", "-", "-", "-"],
