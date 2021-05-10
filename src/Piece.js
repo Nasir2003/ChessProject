@@ -7,7 +7,10 @@ import { ReactComponent as DarkBishop } from "./pieces/dark_bishop.svg";
 import { ReactComponent as DarkKnight } from "./pieces/dark_knight.svg";
 import { ReactComponent as WhiteKnight } from "./pieces/White_Knight.svg";
 import { ReactComponent as WhiteRook} from "./pieces/White-Rook.svg";
-import { ReactComponent as WhiteBishop} from "./pieces/White_Bishop.svg";
+import { ReactComponent as WhiteBishop} from "./pieces/White_Bishop.svg"; 
+import { ReactComponent as WhitePawn } from "./pieces/White_Pawn.svg"; 
+import { ReactComponent as WhiteKing } from "./pieces/White_King.svg"; 
+import { ReactComponent as WhiteQueen } from "./pieces/White_Queen.svg";
 export default function Piece(props) {
   let pieceToRender; 
 
@@ -21,7 +24,20 @@ export default function Piece(props) {
   
   if (props.color === "W" && props.type === "Knight") {
     pieceToRender = <WhiteKnight />;
-  }
+  } 
+
+  if (props.color === "W" && props.type === "Pawn") {
+    pieceToRender = <WhitePawn />;
+  }  
+
+  if (props.color === "W" && props.type === "King") {
+    pieceToRender = <WhiteKing />;
+  } 
+
+  if (props.color === "W" && props.type === "Queen") {
+    pieceToRender = <WhiteQueen />;
+  } 
+
   else if (props.color === "B" && props.type === "Queen") {
     pieceToRender = <DarkQueen />;
   }
