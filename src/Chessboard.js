@@ -18,14 +18,14 @@ export default function Chessboard(props) {
   let [board, setboard] = useState(defaultBoard);
   let handleMovePiece = function(from, to) {
     let newBoard = Array.from(board);
-    let piece = newBoard[from];
-    newBoard[from] = "";
-    newBoard[to] = piece;
+    let rook = newBoard[0];
+    newBoard[0] = "";
+    newBoard[8] = rook;
     setboard(newBoard);
   }
   return (
     <div>
-      <button onClick={() => handleMovePiece(59, 3)}>move piece</button>
+      <button onClick={() => handleMovePiece(0, 8)}>move piece</button>
       <div class="flex_container">
         <Tile location='h1' color='red' piece={board[0]}/> 
         <Tile location='h2' color='blue' piece={board[1]}/> 
