@@ -20,13 +20,16 @@
 }
 
 .blue {
-  height: 100px;
-  width: 100px;
   background-color: skyblue;
 }
 
 .red {
+  background-color: crimson;
+}
+.orange {
+  background-color: orange;
+}
+.tile {
   height: 100px;
   width: 100px;
-  background-color: crimson;
 }
