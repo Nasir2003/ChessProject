@@ -3,8 +3,7 @@ import { useState } from "react";
 export default function Tile(props) {
   let [color, setColor] = useState(props.color);
   let handleTileClick = function() {
-    // TODO: Update color state variable to "orange" to
-    // represent this tile is in "move mode".
+    // TODO: Call props.onClick() and only set the color if it returns true
     setColor('orange');
   };
   return (
