@@ -18,9 +18,9 @@ export default function Chessboard(props) {
   let [board, setboard] = useState(defaultBoard);
   let handleMovePiece = function(from, to) {
     let newBoard = Array.from(board);
-    let rook = newBoard[0];
-    newBoard[0] = "";
-    newBoard[8] = rook;
+    let piece = newBoard[0];
+    newBoard[from] = "";
+    newBoard[to] = piece;
     setboard(newBoard);
   }
   return (
@@ -51,45 +51,45 @@ export default function Chessboard(props) {
       <div class="flex_container">
         <Tile location='f1' color='red' piece={board[16]}/> 
         <Tile location='f2' color='blue' piece={board[17]}/> 
-        <Tile location='f3' color='red' piece={board[17]}/> 
-        <Tile location='f4' color='blue' piece={board[18]}/> 
-        <Tile location='f5' color='red' piece={board[19]}/> 
-        <Tile location='f6' color='blue' piece={board[20]}/> 
-        <Tile location='f7' color='red' piece={board[21]}/> 
-        <Tile location='f8' color='blue' piece={board[22]}/>  
+        <Tile location='f3' color='red' piece={board[18]}/> 
+        <Tile location='f4' color='blue' piece={board[19]}/> 
+        <Tile location='f5' color='red' piece={board[20]}/> 
+        <Tile location='f6' color='blue' piece={board[21]}/> 
+        <Tile location='f7' color='red' piece={board[22]}/> 
+        <Tile location='f8' color='blue' piece={board[23]}/>  
       </div>
 
       <div class="flex_container">
-        <Tile location='e1' color='blue' piece={board[23]}/> 
-        <Tile location='e2' color='red' piece={board[24]}/> 
-        <Tile location='e3' color='blue' piece={board[25]}/> 
-        <Tile location='e4' color='red' piece={board[26]}/> 
-        <Tile location='e5' color='blue' piece={board[27]}/>
-        <Tile location='e6' color='red' piece={board[28]}/> 
-        <Tile location='e7' color='blue' piece={board[29]}/> 
-        <Tile location='e8' color='red' piece={board[30]}/>  
+        <Tile location='e1' color='blue' piece={board[24]}/> 
+        <Tile location='e2' color='red' piece={board[25]}/> 
+        <Tile location='e3' color='blue' piece={board[26]}/> 
+        <Tile location='e4' color='red' piece={board[27]}/> 
+        <Tile location='e5' color='blue' piece={board[28]}/>
+        <Tile location='e6' color='red' piece={board[29]}/> 
+        <Tile location='e7' color='blue' piece={board[30]}/> 
+        <Tile location='e8' color='red' piece={board[31]}/>  
       </div>
 
       <div class="flex_container">
-        <Tile location='d1' color='red' piece=''/> 
-        <Tile location='d2' color='blue' piece=''/> 
-        <Tile location='d3' color='red' piece=''/> 
-        <Tile location='d4' color='blue' piece=''/> 
-        <Tile location='d5' color='red' piece=''/> 
-        <Tile location='d6' color='blue' piece=''/> 
-        <Tile location='d7' color='red' piece=''/> 
-        <Tile location='d8' color='blue' piece=''/>  
+        <Tile location='d1' color='red' piece={board[32]}/> 
+        <Tile location='d2' color='blue' piece={board[33]}/> 
+        <Tile location='d3' color='red' piece={board[34]}/> 
+        <Tile location='d4' color='blue' piece={board[35]}/> 
+        <Tile location='d5' color='red' piece={board[36]}/> 
+        <Tile location='d6' color='blue' piece={board[37]}/> 
+        <Tile location='d7' color='red' piece={board[38]}/> 
+        <Tile location='d8' color='blue' piece={board[39]}/>  
       </div>
 
       <div class="flex_container">
-        <Tile location='c1' color='blue' piece=''/> 
-        <Tile location='c2' color='red' piece=''/> 
-        <Tile location='c3' color='blue' piece=''/> 
-        <Tile location='c4' color='red' piece=''/> 
-        <Tile location='c5' color='blue' piece=''/> 
-        <Tile location='c6' color='red' piece=''/> 
-        <Tile location='c7' color='blue' piece=''/> 
-        <Tile location='c8' color='red' piece=''/>  
+        <Tile location='c1' color='blue' piece={board[40]}/> 
+        <Tile location='c2' color='red' piece={board[41]}/> 
+        <Tile location='c3' color='blue' piece={board[42]}/> 
+        <Tile location='c4' color='red' piece={board[43]}/> 
+        <Tile location='c5' color='blue' piece={board[44]}/> 
+        <Tile location='c6' color='red' piece={board[45]}/> 
+        <Tile location='c7' color='blue' piece={board[46]}/> 
+        <Tile location='c8' color='red' piece={board[47]}/>  
       </div>
 
       <div class="flex_container">
