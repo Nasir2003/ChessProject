@@ -1,13 +1,24 @@
-import { useState } from "react";
 
 export default function Tile(props) {
-  let [color, setColor] = useState(props.color);
+  // Expected props:
+  //   props.color: 'red' or 'blue'
+  //   props.onTileClick: function to call when div is clicked
+  //   props.isMoveMode: if true, set color to orange
+
+  let color;
+  // if isMoveMode is true, then set color to 'orange'
+  if (props.isMoveMode){
+    color = 'orange';
+  }
+  // if isMoveMode is false, set color to "red" or "blue" (props.color)
+  else{ 
+    color = props.color;
+  }
   let handleTileClick = function() {
-    // TODO: Call props.onClick() and only set the color if it returns true
-    setColor('orange');
+    props.onTileClick();
   };
   return (
-    <div onClick={() => handleTileClick()}  class={color + ' tile'} id={props.location}>
+    <div onClick={() => handleTileClick()} class={color + ' tile'} id={props.location}>
       {props.piece}
     </div>
   );
