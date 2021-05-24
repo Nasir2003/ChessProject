@@ -42,8 +42,15 @@ export default function Chessboard(props) {
   let handleTileClick = function(tileNumber) {
     // if source is -1, set source state to tileNumber and return true
     if (source === -1){
-      setSource(tileNumber);
-      return true;
+      
+      if (board[tileNumber] !== ''){
+        setSource(tileNumber);
+        return true;
+      }
+      else{
+        return false
+      }
+      
     }
     // else if destination is -1, set destination state to tileNumber and return true
     else if (destination === -1){
