@@ -23,28 +23,32 @@ export default function Chessboard(props) {
   let [destination, setDestination] = useState(-1);
 
   let handleMovePiece = function(from, to) {
+    // TODO: Check if from and to are value numbers [0 - 63].
+
     let newBoard = Array.from(board);
     let piece = newBoard[0];
     newBoard[from] = "";
     newBoard[to] = piece;
     setboard(newBoard);
+
+    // TODO: set source and destination back to -1
   };
 
   let handleTileClick = function(tileNumber) {
     // if source is -1, set source state to tileNumber and return true
     if (source === -1){
-      setSource(tileNumber)
-      return true
+      setSource(tileNumber);
+      return true;
     }
     // else if destination is -1, set destination state to tileNumber and return true
     else if (destination === -1){
-      setDestination(tileNumber)
-      return true
+      setDestination(tileNumber);
+      return true;
     }
     // otherwise, do nothing and return false
     else{
       //nothing lol
-      return false
+      return false;
     }
   };
 
