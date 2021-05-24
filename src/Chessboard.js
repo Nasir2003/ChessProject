@@ -19,8 +19,7 @@ export default function Chessboard(props) {
 
   // source: integer 0 - 63, -1 means "not selected"
   let [source, setSource] = useState(-1);
-  // destination: integer 0 - 63, -1 means "not selected"
-  let [destination, setDestination] = useState(-1);
+  
 
   let handleMovePiece = function(from, to) {
     // TODO: Check if from and to are value numbers [0 - 63].
@@ -31,13 +30,9 @@ export default function Chessboard(props) {
     newBoard[to] = piece;
     setboard(newBoard);
 
-    // TODO: set source and destination back to -1
     setSource(-1)
-    setDestination(-1)
   };
 
-  // TODO: Call handleMovePiece(source, destination) once
-  // the destination state variable is set!
 
   let handleTileClick = function(tileNumber) {
     // if source is -1, set source state to tileNumber and return true
@@ -52,17 +47,11 @@ export default function Chessboard(props) {
       }
       
     }
-    // else if destination is -1, set destination state to tileNumber and return true
-    else if (destination === -1){
-      setDestination(tileNumber);
-      handleMovePiece(source, tileNumber)
-      return true;
-    }
-    // otherwise, do nothing and return false
     else{
-      //nothing lol
+      handleMovePiece(source, tileNumber)
       return false;
     }
+    
   };
 
   let getMoveMode = function(tileNumber) {
@@ -71,9 +60,6 @@ export default function Chessboard(props) {
       return true
     }
     // (or) if destination is equal to tileNumber, return true
-    if (destination === tileNumber){
-      return true
-    }
     return false
   }
 
