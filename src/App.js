@@ -43,8 +43,7 @@ export default function App() {
       <Piece location="0" color="blue king" />
       <Piece location="0" color="blue queen" /> */}
       
-      <h1>Hello Chess CodeSandBox</h1>
-      <h2>Have to know the rules in chess in order to play!</h2>
+      
     </div>
   );
 }
